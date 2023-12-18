@@ -1,42 +1,46 @@
 body {
 	font-family: monospace;
+	background-color: BLACK;
+	color: #33ff33;
 }
 
 ul#playlist {
-	border: 1px solid #38429f;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border: 2px solid #33ff33;
+	
 	margin-top: 10px;
 	padding: 0px;
 	list-style-type: none;
 }
 
 ul#playlist li {
-	border-bottom: 1px solid #a9a9a9;
+	border-bottom: 1px solid #33ff33;
 	padding: 10px;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#18aca9), to(#38429f));
-    background-image: -moz-linear-gradient(#18aca9, #18aca9);
-    background-image: -ms-linear-gradient(#18aca9, #18aca9);
-    background-image: -o-linear-gradient(#18aca9, #18aca9);
-    background-image: -webkit-linear-gradient(#18aca9, #18aca9);
-    background-image: linear-gradient(#18aca9, #18aca9);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+    background-image: -moz-linear-gradient(black, #000000);
+    background-image: -ms-linear-gradient(#000000, #000000);
+    background-image: -o-linear-gradient(#000000, #000000);
+    background-image: -webkit-linear-gradient(#000000, #000000);
+    background-image: linear-gradient(#000000, #000000);
 }
 
 ul#playlist li:last-child {
-	-webkit-border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
 	border-bottom: none;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 ul#playlist li:first-child {
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-topleft: 5px;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.addbutton {
+    color: #33ff33;
 }
