@@ -10,32 +10,29 @@
         }
   
         body {
-          width: 50%;
-          max-width: 800px;
-          min-width: 480px;
-          margin: 0 auto;
+        
+        
           background-color: black;
           font-family: monospace;
         }
         
         .form input[type="number"] {
-          width: 200px;
+          width: 120px;
           color: #33ff33;
         }
   
         .lastResult {
           color: #000000;
-          padding: 3px;
         }
       </style>
     </head>
     <body style = "color: #33ff33;">
         <h1>Number guessing game</h1>
 
-        <p>We have selected a random whole number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+        <p>Guess the random number between 1 and 100 in ten guesses!</p>
 
         <div class="form">
-            <label for="guessField">Enter a guess: </label>
+            <label for="guessField">Guess: </label>
             <input type="number" min="1" max="100" required id="guessField" class="guessField">
             <input type="submit" value="Submit guess" class="guessSubmit" onclick="checkGuess()">
         </div>
@@ -69,16 +66,16 @@
                 lowOrHi.textContent = "";
                 setGameOver();
             } else if (guessCount === 10) {
-                lastResult.textContent = "!!!GAME OVER!!!";
+                lastResult.textContent = "Game Over :(";
                 lowOrHi.textContent = "";
                 setGameOver();
             } else {
-                lastResult.textContent = "Wrong!";
+                lastResult.textContent = "Nope!";
                 lastResult.style.backgroundColor = "#33ff33";
                 if (userGuess < randomNumber) {
-                    lowOrHi.textContent = "Last guess was too low!";
+                    lowOrHi.textContent = "too low!";
                 } else if (userGuess > randomNumber){
-                    lowOrHi.textContent = "Last guess was too high!";
+                    lowOrHi.textContent = "too high!";
                 }
             }
             guessCount++;
@@ -91,7 +88,7 @@
             guessField.disabled = true;
             guessSubmit.disabled = true;
             resetButton = document.createElement("button");
-            resetButton.textContent = "Start New Game";
+            resetButton.textContent = "New Game";
             document.body.append(resetButton);
             resetButton.addEventListener("click", resetGame);
         }
