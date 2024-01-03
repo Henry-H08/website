@@ -1,3 +1,16 @@
 a {
     text-decoration: none;
+    
   }
+
+  body {
+    
+      background-color: BLACK;
+      font-family: monospace;
+      color: #33ff33;
+
+  }
+  img 
+                {
+                border: 2px solid #33ff33;
+                }
