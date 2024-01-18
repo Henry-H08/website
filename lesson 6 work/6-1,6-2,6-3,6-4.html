@@ -50,7 +50,8 @@
     alert("The function has been called and was passed " + arg1);
     return "myFunction() return value";
 }
-
+    // 6-3 |
+    //     v
     var numCorrect = 0;
     function takeTest() {
         var response = "";
@@ -78,9 +79,51 @@
         return numCorrect;
     }
 
+
+   
+
+    function addNumbers(arg1, arg2) {
+    var result = arg1 + arg2;
+    return result;
+}
+alert("Please enter a numerical value in each of the following prompt dialog boxes. \nThe two numbers will be added together.");
+var num1 = prompt("Please enter a numerical value.","");
+var num2 = prompt("Please enter a numerical value.","");
+document.write("<p>The result of the addNumbers() function is: <strong>" + addNumbers( parseFloat(num1), parseFloat(num2)) + "</strong></p>");
+    // 6-4 |
+    //     v 
+var numCorrect = 0;
+    function takeTest() {
+        var response = "";
+        var points = 0;
+        var q1 = "What company developed Javascript?";
+        var a1 = "NETSCAPE";
+        var q2 = "Using Javascript operator precedence,\n what is the result of the following expression? 2 + 4 * 6";
+        var a2 = 26;
+        var q3 = "With what object-oriented programming language\n is Javascript often compared and confused?";
+        var a3 = "JAVA";
+        response = prompt(q1, "");
+        if (response) points = runningTotal(response.toUpperCase() == a1 ? 1 : 0);
+        alert(points);
+        response = prompt(q2, "");
+        if (response) points = runningTotal(response == a2 ? 1 : 0);
+        alert(points);
+        response = prompt(q3, "");
+        if (response) points = runningTotal(response.toUpperCase() == a3 ? 1 : 0);
+        alert("You answered a total of " + points + " correctly.");
+        numCorrect = 0;
+        points = 0;
+    }
+    function runningTotal(i) {
+        numCorrect += i;
+        return numCorrect;
+    }
+
+
         </script>
         <style type="text/css"></style>
     </head>
+    <!-- optional lab 6-2 -->
     <body onload="myFunction();">
         <h2>CIW Advanced HTML5 and CSS3 Specialist</h2>
         <h3>JavaScript Get or Set Checked Radio Value</h3>
@@ -99,14 +142,20 @@
                  <input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '');" value="Uncheck All" />
             </p>
         </form>
+        <!-- optional lab 6-2 end -->
         <hr>
+        <!-- lab 6-2-->
         <form name="myForm">
             <input type="button" value="Call Function" onclick="myFunction('a string of text');" />
         </form>
+        <!-- lab 6-2 end -->
         <hr>
+       <!-- lab 6-3 -->
         <form>
             <input type="button" value="Take Quiz" onclick="takeTest();" />
         </form>
+        <!-- lab 6-3 end -->
+        
     </body>
     
 </html>
