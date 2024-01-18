@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>work</title>
+        <script>
+            /***********************************************
+            A function named myFunction() is defined.
+            The function displays an alert() when invoked.
+            ***********************************************/
+            function myFunction() {
+                alert("The HTML page has loaded.");
+            }
+            
+            function getCheckedValue(radioObj) {
+                if (!radioObj) 
+                    return "";
+                var radioLength = radioObj.length;
+                if (radioLength == undefined)
+                    if (radioObj.checked) 
+                        return radioObj.value;
+                    else return "";
+                for (var i = 0; i < radioLength; i++) {
+                    if (radioObj[i].checked) {
+                        return radioObj[i].value;
+                    }
+                }
+                return "";
+            }
+            // set the radio button with the given value as being checked
+            // do nothing if there are no radio buttons
+            // if the given value does not exist, all the radio buttons
+            // are reset to unchecked
+            function setCheckedValue(radioObj, newValue) {
+                if (!radioObj) 
+                    return;
+                var radioLength = radioObj.length;
+                if (radioLength == undefined) {
+                    radioObj.checked = radioObj.value == newValue.toString();
+                    return;
+                }
+                for (var i = 0; i < radioLength; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            }
+            function myFunction(arg1) {
+    alert("The function has been called and was passed " + arg1);
+    return "myFunction() return value";
+}
+
+    var numCorrect = 0;
+    function takeTest() {
+        var response = "";
+        var points = 0;
+        var q1 = "What company developed JavaScript?";
+        var a1 = "NETSCAPE";
+        var q2 = "Using JavaScript operator precedence,\n what is the result of the following expression? 2 + 4 * 6";
+        var a2 = 26;
+        var q3 = "With what object-oriented programming language\n is JavaScript often compared and confused?";
+        var a3 = "JAVA";
+        response = prompt(q1, "");
+        if (response) points = runningTotal(response.toUpperCase() == a1 ? 1 : 0);
+        alert(points);
+        response = prompt(q2, "");
+        if (response) points = runningTotal(response == a2 ? 1 : 0);
+        alert(points);
+        response = prompt(q3, "");
+        if (response) points = runningTotal(response.toUpperCase() == a3 ? 1 : 0);
+        alert("You answered a total of " + points + " correctly.");
+        numCorrect = 0;
+        points = 0;
+    }
+    function runningTotal(i) {
+        numCorrect += i;
+        return numCorrect;
+    }
+
+        </script>
+        <style type="text/css"></style>
+    </head>
+    <body onload="myFunction();">
+        <h2>CIW Advanced HTML5 and CSS3 Specialist</h2>
+        <h3>JavaScript Get or Set Checked Radio Value</h3>
+        <form name="radioExampleForm" method="get" action="" onsubmit="return false;">
+            <p>
+                <label for="number0"> <input type="radio" value="0" name="number" /> Zero</label>
+                 <label for="number1"> <input type="radio" value="1" name="number" /> One</label> 
+                 <label for="number2"> <input type="radio" value="2" name="number" /> Two</label> 
+                 <label for="number3"> <input type="radio" value="3" name="number" /> Three</label> 
+                 <label for="number4"> <input type="radio" value="4" name="number" /> Four</label>
+            </p>
+            <p>
+                <input type="button" onclick="alert('Checked value is: '+getCheckedValue(document.forms['radioExampleForm'].elements['number']));" value="Show Checked Value" />
+                 <input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '2');" value="Set Checked to Two" /> 
+                 <input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '4');" value="Set Checked to Four" /> 
+                 <input type="button" onclick="setCheckedValue(document.forms['radioExampleForm'].elements['number'], '');" value="Uncheck All" />
+            </p>
+        </form>
+        <hr>
+        <form name="myForm">
+            <input type="button" value="Call Function" onclick="myFunction('a string of text');" />
+        </form>
+        <hr>
+        <form>
+            <input type="button" value="Take Quiz" onclick="takeTest();" />
+        </form>
+    </body>
+    
+</html>
