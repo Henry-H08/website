@@ -10,20 +10,19 @@
         </style>
        
          <script>
-            function allowDrop(ev) 
-            {
-                ev.preventDefault();
-            }
-            function drag(ev)
-             {
-                ev.dataTransfer.setData("Text", ev.target.id);
-            }
-            function drop(ev) 
-            {
-                var data = ev.dataTransfer.getData("Text");
-                ev.target.appendChild(document.getElementById(data));
-                ev.preventDefault();
-            }
+            function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
         </script>
 
 
@@ -103,9 +102,10 @@
 
     <h2>7-3 Drag and Drop Elements</h2>
     <p>Drag the CIW image into the rectangle:</p>
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img id="drag1" src="CIWLogo.PNG" draggable="true" ondragstart="drag(event)" width="336" height="69" />
-    </div>
+    
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
     <br/>
 
 
