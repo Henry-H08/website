@@ -5,7 +5,11 @@
     </div>
     <head>
         <style>
-            
+             body {
+              background-color: BLACK;
+              font-family: monospace;
+              color: #33ff33;
+            }
 	        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
         </style>
        
@@ -53,6 +57,7 @@ function drop(ev) {
                 ctx.moveTo(65,65);
                 ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
                 ctx.moveTo(95,65);
+                
                 ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
                 ctx.stroke();
               }
@@ -108,6 +113,25 @@ function drop(ev) {
 <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
     <br/>
 
+    <h2>7-4 Using the File API</h2>
+
+    <p>Select two files: <input type="file" id="files" name="files[]" multiple /></p>
+    <output id="list"></output>
+    <script>
+        function handleFileSelect(e) {
+            var files = e.target.files;
+            var output = "";
+            for (var i = 0, x = files.length; i < x; ++i) {
+                var name = escape(files[i].name);
+                var type = files[i].type || "n/a";
+                var size = files[i].size;
+                var lastModDate = files[i].lastModifiedDate ? files[i].lastModifiedDate.toLocaleDateString() : "n/a";
+                output += "<li><strong>" + name + "</strong> (" + type + ") - " + size + " bytes, last modified: " + lastModDate + "</li>";
+            }
+            document.getElementById("list").innerHTML = "<ul>" + output + "</ul>";
+        }
+        document.getElementById("files").addEventListener("change", handleFileSelect);
+    </script>
 
 
     </body>
