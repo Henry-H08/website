@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML5 Canvas API Example</title>
+
+        <style>
+             body {
+              background-color: BLACK;
+              font-family: monospace;
+              color: #33ff33;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CIW Advanced HTML5 and CSS3 Specialist</h1>
+        <h2>Canvas Demonstration</h2>
+        <canvas width="200" height="200"></canvas>
+        <script>
+           
+            function draw() {
+                var canvas = document.getElementById("canvas");
+                if (canvas.getContext) {
+                    var ctx = canvas.getContext("2d");
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.fillStyle = "yellow";
+                    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); 
+                    ctx.fill();
+                    ctx.arc(75, 75, 35, 0, Math.PI, false); 
+                    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); 
+                    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); 
+                    ctx.stroke();
+                }
+            }
+            window.onload = draw;
+        </script>
+    </body>
+</html>
