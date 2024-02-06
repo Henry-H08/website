@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
     <div class="header">
-        <h1>Labs</h1>
+        <h1>Lesson 7 Labs</h1>
     </div>
+    <head>
+        <style>
+            body {
+              background-color: BLACK;
+              font-family: monospace;
+              color: #33ff33;
+            }
+        </style>
+         <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            function drag(ev) {
+                ev.dataTransfer.setData("Text", ev.target.id);
+            }
+            function drop(ev) {
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+                ev.preventDefault();
+            }
+        </script>
+
+
+
+
+
+
+    </head>
     <body>
-    <h2>Canvas Demonstration</h2>
+    <h2>7-1 Canvas Demonstration</h2>
     <canvas id="canvas" width="200" height="200"></canvas>
     <script>
         // Code adapted from https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
@@ -16,7 +44,8 @@
     
                 ctx.beginPath();
                 ctx.lineWidth = 3;
-                ctx.fillStyle = "yellow";
+                ctx.strokeStyle = "#33ff33";
+                ctx.fillStyle = "black";
                 ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
                 ctx.fill();
                 ctx.moveTo(110,75);
@@ -30,6 +59,57 @@
         }
         window.onload = draw;
     </script>
+    
+    
+    <br/>
+
+    <h2>7-2 Using the Geolocation API</h2>
+    <p>Click the button to get your position.</p>
+    <button onclick="getLocation()">My Location</button>
+    <p id="test"></p>
+    <script>
+        var latlon = document.getElementById("test");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                latlon.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            latlon.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    latlon.innerHTML = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    latlon.innerHTML = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    latlon.innerHTML = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    latlon.innerHTML = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+
+
+    <br/>
+
+    <h2>7-3 Drag and Drop Elements</h2>
+    <p>Drag the CIW image into the rectangle:</p>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br/>
+    <img id="drag1" src="lucy.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69" />
+
+
+
+
+
     </body>
     </html>
     
