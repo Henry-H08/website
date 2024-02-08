@@ -4,6 +4,7 @@
         <h1>Lesson 7 Labs</h1>
     </div>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style>
              body {
               background-color: BLACK;
@@ -20,7 +21,16 @@
         
         </style>
         
-
+        <script>
+            $(document).ready(function () {
+                $("#hide_button").click(function () {
+                    $("article").hide();
+                });
+                $("#show_button").click(function () {
+                    $("article").show();
+                });
+            });
+        </script>
 
          <script>
           
@@ -146,7 +156,11 @@
     </script>
     <br/>
     <h2>optional lab 7-1 Using JQuery in a webpage</h2>
-
+    <section>
+        <button id="hide_button" style=" color: #33ff33;">Hide Articles</button>
+        <button id="show_button" style=" color: #33ff33;">Show Articles</button>
+        <article>CheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheeseCheese</article>
+    </section>
 
     </body>
     </html>
