@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>chickens</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="uCorp.css">
+        
        
     </head>
     <body>
