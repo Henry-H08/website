@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>chickens</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#hide_button").click(function () {
+                    $("article").hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <section>
+            <button id="hide_button">Hide Articles</button>
+            <article>...</article>
+        </section>
+    
+              
+    </body>
+</html>
