@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <form class="floatright">
+                <input type="search" name="websearch" placeholder="Enter search" />
+                <button type="submit" formaction="https://www.ciwcertified.com/about-ciw">Search Web</button>
+            </form>
+        </header>
+        
+        <article>
+            <h2>8-1 Using new html5 input types and 8-2 Using html5 datalist element</h2>
+            <form>
+                <p>
+                    <label for="first">First name: </label>
+                    <input type="text" name="firstname" id="first" />
+                </p>
+                <p>
+                    <label for="last">Last name: </label>
+                    <input type="text" name="lastname" id="last" />
+                </p>
+                <p>
+                    <label for="db">Date of Birth: </label>
+                    <input type="date" name="dob" id="db" />
+                </p>
+                <p>
+                    <label for="cont">Your Continent: </label>
+                    <input list="continents" name="continent" id="cont" />
+                    <datalist id="continents">
+                        <option value="North America"> </option>
+                        <option value="South America"> </option>
+                        <option value="Europe"> </option>
+                        <option value="Asia"> </option>
+                        <option value="Africa"> </option>
+                        <option value="Australia"> </option>
+                        <option value="Antarctica"> </option>
+                    </datalist>
+                </p>
+                <p>
+                    <label for="tech">How many technologies do you know?: 0 </label>
+                    <input type="range" name="technologies" min="0" max="50" value="25" id="tech" /> 10+
+                </p>
+                <p>
+                    <label for="num">Age of user: </label>
+                    <input type="number" name="age" min="1" max="100" id="num" />
+                </p>
+            </form>
+        </article>
+        <br/>
+        <h2>8-3 Using fieldset and legend elements</h2>
+        <form>
+            <fieldset name="personal_info">
+                <legend>Personal Information:</legend>
+                <p>
+                    <label for="first">First name: </label>
+                    <input type="text" name="firstname" id="first" />
+                </p>
+                <p>
+                    <label for="last">Last name: </label>
+                    <input type="text" name="lastname" id="last" />
+                </p>
+                <p>
+                    <label for="db">Date of Birth: </label>
+                    <input type="date" name="dob" id="db" />
+                </p>
+                <p>
+                    <label for="cont">Your Continent: </label>
+                    <input list="continents" name="continent" id="cont" />
+                    <datalist id="continents">
+                        <option value="North America"> </option>
+                        <option value="South America"> </option>
+                        <option value="Europe"> </option>
+                        <option value="Asia"> </option>
+                        <option value="Africa"> </option>
+                        <option value="Australia"> </option>
+                        <option value="Antarctica"> </option>
+                    </datalist>
+                </p>
+            </fieldset>
+            <fieldset name="other-information">
+                <legend>Other Information:</legend>
+                <p>
+                    <label for="tech">How many technologies do you know?: 0 </label>
+                    <input type="range" name="technologies" min="0" max="50" value="25" id="tech" /> 10+
+                </p>
+                <p>
+                    <label for="num">Age of user: </label>
+                    <input type="number" name="age" min="1" max="100" id="num" />
+                </p>
+            </fieldset>
+        </form>
+        <br/>
+        <h2>8-4 using the textarea element with placeholder attribute</h2>
+        <p>
+            <label for="join">Why do you want to join?: </label>
+        </p>
+         <p>
+            <textarea name="reason" placeholder="I want to join because... (140 characters maximum)" maxlength="140" rows="3" cols="30" id="join"></textarea>
+        </p>
+        <br/>
+        <h2>Application project 8-1 using the email file type</h2>
+        
+
+        
+
+    </body>
+    </html>
