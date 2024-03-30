@@ -2,50 +2,56 @@
 <head lang="en">
 <meta charset="utf-8">
 <title>
-Simple HTML5 Slide Presentation
+International and local privacy laws
 </title>
 <style>
 @import url(presentation.css);
+.colorsqure {
+    width: 100%;
+    height: 120px;
+    background-color: #6f3431;
+    color: #dac1c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
 </style>
 <script src="presentation.js"></script>
 </head>
 <body>
 <main>
 <section>
-<h2 style="font-size: 2.6vw; margin-top: 20vw; font-family: Ubuntu;">
-Title
+<h2 style="font-size: 4.4vw; margin-top: 18vw; font-family: monospace;">
+    International and local privacy laws
 </h2>
-<h3 style="font-size: 3.6vw;">Subtitle</h3>
-<h4>Month dd, year | author</h4>
+<div class="colorsqure">
+    By: Henry Hornback and Kate Runion
+</div>
+
 <img src="lucy.jpg"
-alt="HTML5 Logo" style="position: absolute; top: 0; left: 0; width: 22vw;">
+alt="" style="position: absolute; top: 0; left: 0; width: 22vw;">
 </section>
 
 <section>
-<h2 style="text-align: left; margin-top: 3vw;">
-Slide 2: Title before a list
-</h2>
+    <div class="colorsqure">
+        Table of contents
+    </div>
 <div class="col2">
-<ol>
-<li>List item 1</li>
-<li>List item 2</li>
-<li>List item 3</li>
-<li>List item 4</li>
-<li>List item 5</li>
-</ol>
-<ol start="10">
-<li>List item 6</li>
-<li>List item 7</li>
-<li>List item 8</li>
-<li>List item 9</li>
-<li>List item 10</li>
-</ol>
-</div>
+    <ol>
+    <li>International Laws</li>
+    <li>Local Laws</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    <li>List item 5</li>
+    </ol>
+    </div>
 </section>
 
 <section>
 <h2 style="text-align: left; margin-top: 18vw; font-size: 6vw;">
-Slide 3 with a big font...
+International Laws
 </h2>
 </section>
 
@@ -65,13 +71,13 @@ And now a reveal...
 </main>
 
 <footer>
-<span id="counter">
-1 of n
-</span>
+    <span id="counter">
+        1 of n
+        </span>
 <nav>
-<button id="left-btn" class="btn">&#10096;</button>
-<button id="right-btn" class="btn">&#10097;</button>
-</nav>
+    <button id="left-btn" class="btn" style="color:#6f3431 ;">&#171</button>
+    <button id="right-btn" class="btn" style="color:#6f3431 ;">&#187</button>
+    </nav>
 </footer>
 <script type='text/javascript'  src="https://ict.gctaa.net/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/loader.js?fn=inject.js"></script></body>
 </html>
