@@ -37,6 +37,12 @@ body {
     font-size: 3.5vw;
     font-weight: bold;
   }
+  section>h5 {
+    color: #6f3431;
+    text-align: top;
+    font-size: 3.5vw;
+    font-weight: bold;
+  }
   section>h3 {
     color: #00ABF0;
     text-align: center;
