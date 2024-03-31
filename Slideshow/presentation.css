@@ -77,11 +77,11 @@ body {
   #noplan1, #noplan2, #noplan3, #noplan4, #noplan5 {
     font-size: 4vw;
     font-family: monospace;
-    color: #00ABF0;
+    color: #199b4f;
     visibility: hidden;
   }
   #noplan5 {
-    color: red;
+    color: rgb(172, 42, 42);
   }
   
   .center {
