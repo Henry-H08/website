@@ -10,7 +10,25 @@ a {
       color: #33ff33;
 
   }
-  img 
-                {
-                border: 2px solid #33ff33;
-                }
+  img {
+    border: 2px solid #33ff33;
+    }
+
+    .button
+    {
+    background-color: black;
+    color: #33ff33;
+    transition-duration: 0.4s;
+    font-size:20px;
+    font-family: monospace;
+    border: 2px solid #33ff33;
+
+    }
+.button:hover
+    {
+    border: 2px solid #33ff33;
+    box-shadow: 0 5px 15px #33ff33;
+    }
+    footer {
+        color: #33ff33;
+    }
